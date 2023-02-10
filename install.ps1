@@ -12,7 +12,7 @@ function install_packages($filepath) {
     $packages = Get-Content $filepath
     # Instala cada pacote usando o winget 
     $packages | ForEach-Object {
-        winget install -e -p$_
+        winget install -e --id$_
     }
 }
 
